@@ -1,0 +1,12 @@
+{%extends "frontendworkflow/base.html" %}
+{%load crispy_forms_tags%}
+{% block content %}
+
+<p><h1>Customer File Upload</h1></p>
+<form method="POST" class="post-form" enctype="multipart/form-data">  
+        {% csrf_token %}  
+        {{ form|crispy}}  
+        <button type="submit" class="save btn btn-default">Save</button>  
+</form> 
+
+{% endblock content %}
