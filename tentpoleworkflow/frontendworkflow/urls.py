@@ -6,5 +6,5 @@ from frontendworkflow import views
 urlpatterns = [  
     path('admin/', admin.site.urls),  
     path('', views.index),  
-    path('renderplot',views.plotview)
+   # path('renderplot',views.plotview)
 ] 

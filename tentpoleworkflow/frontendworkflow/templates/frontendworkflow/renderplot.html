@@ -2,5 +2,70 @@
 {%load crispy_forms_tags%}
 {% block content %}
 
-<h1>Graph with points</h1>
-<img src='/frontendworkflow/static/upload/pie.png' />
+	  <!-- Highcharts display -->
+	  <div class="border" id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+	  <!-- Table data -->
+	  <h2 class="pt-4">Section Details</h2>
+	  <p class="text-danger">This table will be upated by Django objects, hence leaving it as it is.</p>
+	  <div class="table-responsive">
+	    {{table_data|safe}}
+	  </div>
+	</main>
+      </div>
+    </div>
+	
+    <!-- Chartjs libraries -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+    <script>
+        _categories = {{categories|safe}};
+        _values = {{values|safe}};
+        
+        Highcharts.chart('container', {
+        chart: {
+                type: 'column'
+        },
+        title: {
+                text: 'Customer Monthly Expenditure'
+        },
+        subtitle: {
+                text: ''
+        },
+        xAxis: {
+                categories:_categories,
+                crosshair: true
+        },
+        yAxis: {
+                min: 0,
+                title: {
+            text: 'Income'
+                }
+        },
+        tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} rand</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+        },
+        plotOptions: {
+                column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+          }
+        },
+        series: [{
+                name: 'Month Of The Year',
+                data: _values
+            
+        }]
+        });
+        </script>
+    
+{% endblock content %}
+    
+  
