@@ -17,4 +17,6 @@ This application is a django application that takes in customer information(Name
 
     http://127.0.0.1:8000/
     
-
+# Assumptions 
+1. The excel Sheet to hold customer expinditure is named Sheet1
+2. Assuming the user will upload an excel file when choosing a file to upload 
