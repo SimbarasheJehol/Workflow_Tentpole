@@ -13,6 +13,8 @@ This application is a django application that takes in customer information(Name
     
     python manage.py runserver
     
-4.Then go to the browser and open local address.
+4.Then go to the browser and open local address
+
+    http://127.0.0.1:8000/
     
 
