@@ -10,6 +10,7 @@ This is an application is a django application that takes in customer informatio
     pip install django-crispy-forms
 
 3.Then make sure in the terminal you change directory into tentpoleworkflow such that you can see manage.py file and then excute the following:
+    
     python manage.py runserver
     
 4.Then go to the browser and open local address.
