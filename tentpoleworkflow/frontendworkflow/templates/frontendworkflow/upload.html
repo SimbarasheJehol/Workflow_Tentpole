@@ -3,6 +3,7 @@
 {% block content %}
 
 <p><h1>Customer File Upload</h1></p>
+<p class="text-danger">The Sheet Containing Customer Data Must Be Named Sheet1.</p>
 <form method="POST" class="post-form" enctype="multipart/form-data">  
         {% csrf_token %}  
         {{ form|crispy}}  

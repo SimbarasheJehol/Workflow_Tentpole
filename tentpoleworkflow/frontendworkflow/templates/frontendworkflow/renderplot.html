@@ -7,7 +7,7 @@
 
 	  <!-- Table data -->
 	  <h2 class="pt-4">Section Details</h2>
-	  <p class="text-danger">This table will be upated by Django objects, hence leaving it as it is.</p>
+	  <p class="text-danger">This table will be upated by Django uploaded Excel file</p>
 	  <div class="table-responsive">
 	    {{table_data|safe}}
 	  </div>
@@ -41,13 +41,13 @@
         yAxis: {
                 min: 0,
                 title: {
-            text: 'Income'
+            text: 'Expenses of Income Received'
                 }
         },
         tooltip: {
                 headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
                 pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} rand</b></td></tr>',
+            '<td style="padding:0"><b>{point.y:.1f} ZAR</b></td></tr>',
                 footerFormat: '</table>',
                 shared: true,
                 useHTML: true
@@ -59,7 +59,7 @@
           }
         },
         series: [{
-                name: 'Month Of The Year',
+                name: 'Expenditure of the Income Shown in the table ',
                 data: _values
             
         }]
