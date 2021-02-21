@@ -1,5 +1,5 @@
 # Workflow_Tentpole
-This is an application is a django application that takes in customer information(Name ,surname ,date of birth and an excel file) and renders a graph showinf customer expinditure per month.
+This application is a django application that takes in customer information(Name ,surname ,date of birth and an excel file) and renders a graph showing customer expinditure per month.
 
 # Usage
 1.Make sure to install python 3+ first in your system.
